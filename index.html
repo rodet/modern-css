@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/hcd.css">
+
+		<link rel="stylesheet" href="plugin/highlight/solarized-dark.css" />
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+
+	<body>
+		<div class="reveal hcd ibm-type-sans">
+			<div class="slides">
+				<section class="hcd-section hcd-section--intro">
+					<section class="hcd-section">
+						<h1 class="hcd-h1">Modern CSS Structure</h1>
+						<h2 class="hcd-h2">A brief history of CSS</h2>
+					</section>
+					<section class="hcd-section">
+						<h2 class="hcd-h2">@rodet&nbsp;&nbsp;&nbsp;🥖&nbsp;&nbsp;&nbsp;👁🐝M&nbsp;&nbsp;&nbsp;☁️&nbsp;&nbsp;&nbsp;🖥&nbsp;&nbsp;&nbsp;🎼&nbsp;&nbsp;&nbsp;🛩</h2>
+					</section>
+				</section>
+
+				<section class="hcd-section hcd-section--structure"
+								 data-external="slides/01-structure.html">
+				</section>
+
+				<section class="hcd-section hcd-section--findings"
+								 data-external="slides/02-findings.html">
+				</section>
+
+				<section class="hcd-section hcd-section--methods"
+								 data-external="slides/03-methods.html">
+				</section>
+
+				<section class="hcd-section hcd-section--bem"
+								 data-external="slides/04-bem.html">
+				</section>
+
+				<section class="hcd-section hcd-section--bem"
+								 data-external="slides/05-components.html">
+				</section>
+
+				<section class="hcd-section hcd-section--preprocessors"
+								 data-external="slides/06-preprocessors.html">
+				</section>
+
+				<!-- Recent developments in CSS have been speeding up, changing previous
+			       assumptions -->
+				<section class="hcd-section hcd-section--variables"
+								 data-external="slides/07-variables.html">
+				</section>
+
+				<section class="hcd-section hcd-section--modules"
+								 data-external="slides/08-modules.html">
+				</section>
+
+				<section class="hcd-section hcd-section--css-in-js"
+								 data-external="slides/09-css-in-js.html">
+				</section>
+
+				<!-- Styled components? -->
+
+				<section class="hcd-section hcd-section--conclusion"
+								 data-external="slides/10-conclusion.html">
+				</section>
+			</div>
+		</div>
+
+		<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js',
+						async: true,
+						callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/external/external.js',
+						condition: function() {
+							return !!document.querySelector('[data-external]');
+						}
+					}
+				],
+
+				slideNumber: true,
+				history: true,
+				viewDistance: 10,
+
+				// The "normal" size of the presentation, aspect ratio will be preserved
+				// when the presentation is scaled to fit different resolutions. Can be
+				// specified using percentage units.
+				width: 1400,
+				height: 900,
+
+				// Factor of the display size that should remain empty around the content
+				margin: 0.1,
+
+				// Bounds for smallest/largest possible scale to apply to content
+				minScale: 0.2,
+				maxScale: 5
+			});
+		</script>
+	</body>
+</html>

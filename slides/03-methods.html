@@ -1,0 +1,52 @@
+<section class="hcd-section">
+  <h2 class="hcd-h2">3. Why *some* approach is needed 🗑</h2>
+</section>
+
+<section class="hcd-section">
+  <div class="hcd-half">
+<pre class="hcd-pre html ibm-type-sans"><code>&lt;main&gt;
+  &lt;header&gt;
+    &lt;ul&gt;
+      &lt;li&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/header&gt;
+&lt;/main&gt;
+</code></pre>
+<pre class="hcd-pre css ibm-type-sans"><code>header ul {
+  margin: 1em 0;
+  padding: 0;
+}
+</code></pre>
+</section>
+
+<section class="hcd-section">
+  <h3 class="hcd-h3">A few weeks later...</h3>
+<pre class="hcd-pre css ibm-type-sans"><code>header ul,
+.other-context ul {
+  background: black;
+  list-style: none;
+}
+</code></pre>
+  <ul class="hcd-ul">
+    <li class="fragment fade-up">How do you find the affected markup?</li>
+    <li class="fragment fade-up">How do you properly change only one of them without breaking the other?</li>
+    <li class="fragment fade-up">How do you structure your code by file?</li>
+  </ul>
+</section>
+
+<section class="hcd-section">
+  Soon, that's your CSS:
+  <section class="hcd-section">
+    <img class="hcd-img" src="img/book-mess.jpg" />
+    <a class="hcd-small hcd-right"
+       href="http://www.amctvasia.com/blog/6-signs-you-might-be-the-worst-house-guest-ever">[source]</a>
+  </section>
+  <section class="hcd-section">
+    <h3 class="hcd-h3">So better methods are needed</h3>
+  </section>
+</section>
+
+<section class="hcd-section">
+  <a href="https://www.smashingmagazine.com/2016/11/css-inheritance-cascade-global-scope-new-old-worst-best-friends/">CSS Inheritance, The Cascade And Global Scope: Your New Old Worst Best Friends</a>
+</section>

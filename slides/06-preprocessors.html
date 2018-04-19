@@ -1,0 +1,120 @@
+<section class="hcd-section">
+  <h2 class="hcd-h2">5. CSS Preprocessors ⚙️</h2>
+  <i>LESS, SASS, PostCSS</i>
+</section>
+
+<section class="hcd-section">
+  <h3 class="hcd-h3">Pre-processors brought modularity forward with nesting and reusable blocks (mixins, functions, etc)</h3>
+</section>
+
+<section class="hcd-section">
+  <h3 class="hcd-h3">Nesting</h3>
+  <div class="hcd-half hcd-fullwidth">
+<pre class="hcd-pre sass ibm-type-sans"><code class="sass">// Sass
+.class {
+  color: #bada55;
+  a {
+    color: #c0ffee;
+    &:hover {
+      color: #ac1d1c;
+    }
+  }
+  &--connected {
+    color: #0ff1ce;
+  }
+}</code></pre>
+<pre class="hcd-pre sass ibm-type-sans"><code>// Compiled CSS
+.class {
+  color: #bada55;
+}
+.class a {
+  color: #c0ffee;
+}
+.class a:hover {
+  color: #ac1d1c;
+}
+.class--connected {
+  color: #0ff1ce;
+}</code></pre>
+  </div>
+</section>
+
+<section class="hcd-section">
+  <h3 class="hcd-h3">Imports</h3>
+  <div class="hcd-half hcd-fullwidth">
+<pre class="hcd-pre sass ibm-type-sans"><code class="sass">// Sass, _foo.scss
+.foo {
+  content: 'Hello World';
+}</code></pre>
+<pre class="hcd-pre sass ibm-type-sans"><code>// Sass, bar/_baz.scss
+.baz {
+  content: 'Goodbye World';
+}</code></pre>
+  </div>
+  <br />
+  <div class="hcd-half hcd-fullwidth">
+<pre class="hcd-pre sass ibm-type-sans"><code class="sass">// Sass, style.scss
+@import 'foo';
+
+.waldo {
+  content: 'Where is Waldo?'
+}
+
+@import 'bar/baz';</code></pre>
+<pre class="hcd-pre sass ibm-type-sans"><code>// CSS, style.css
+.foo {
+  content: 'Hello World';
+}
+
+.waldo {
+  content: 'Where is Waldo?'
+}
+
+.baz {
+  content: 'Goodbye World';
+}</code></pre>
+  </div>
+</section>
+
+<section class="hcd-section">
+  <h3 class="hcd-h3">File organisation is a topic of itself too</h3>
+</section>
+
+<section class="hcd-section" data-background-iframe="https://raygun.com/blog/modular-css/" data-background-interactive>
+</section>
+
+<section class="hcd-section">
+  <h2 class="hcd-h2">Reusability</h2>
+</section>
+
+<section class="hcd-section">
+  <h3 class="hcd-h3">Functions</h3>
+  <pre class="hcd-pre sass ibm-type-sans"><code>// Sass
+@function rwd($target, $context) {
+  @return $target / $context * 100%;
+}
+
+.sidebar {
+  width: rwd(300, 940);
+}</code></pre>
+</section>
+
+<section class="hcd-section">
+  <h3 class="hcd-h3">Mixins</h3>
+  <pre class="hcd-pre sass ibm-type-sans"><code>// Sass
+@mixin button($color) {
+  $border: mix(black, $color, 40%);
+
+  background: $color;
+  border: 2px solid $border;
+
+  &amp;:hover {
+    background: mix(white, $color, 25%);
+    border-color: mix(white, $border, 25%);
+  }
+}
+
+.button--error {
+  @include button(red);
+}</code></pre>
+</section>

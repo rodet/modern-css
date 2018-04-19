@@ -1,0 +1,206 @@
+/**
+ * Hybrid Cloud Design theme
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+@import url(../../node_modules/@ibm/type/css/ibm-type.min.css);
+
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: #242E3F;
+
+$mainColor: #FDFCFC;
+$headingColor: #FDFCFC;
+
+$mainFontSize: 38px;
+$mainFont: 'IBM Plex Sans', Helvetica, sans-serif;
+$headingFont: 'IBM Plex Sans', Helvetica, sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: uppercase;
+$headingFontWeight: 600;
+$linkColor: #42affa;
+$linkColorHover: lighten( $linkColor, 15% );
+$selectionBackgroundColor: lighten( $linkColor, 25% );
+
+$heading1Size: 105px;
+$heading2Size: 70px;
+$heading3Size: 1.3em;
+$heading4Size: 1.0em;
+
+section.has-light-background {
+	&, h1, h2, h3, h4, h5, h6 {
+		color: #222;
+	}
+}
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+.hcd {
+  $headingColors: #9855D4,#478DE4,#01B6CB,#B4E050,#FEAF02,#DC277F;
+
+	.hcd-half {
+		display: flex;
+		justify-content: space-between;
+
+		.hcd-pre {
+			flex: 0 1 auto;
+			vertical-align: top;
+			width: 48%;
+			margin: 0;
+
+			code {
+				max-height: initial;
+			}
+		}
+
+	}
+
+	.hcd-h1,
+	.hcd-h2,
+	.hcd-h3,
+	.hcd-h4 {
+		line-height: 2em;
+		margin-top: 1em;
+		margin-bottom: 1.5em;
+		text-transform: none;
+	}
+
+	.hcd-h1::before,
+	.hcd-h2::before,
+	.hcd-h3::before {
+		content: '';
+		height: 10px;
+		position: absolute;
+		width: 20%;
+	}
+
+	.hcd-section--intro,
+	.hcd-section--variables {
+		.hcd-h1::before,
+		.hcd-h2::before,
+		.hcd-h3::before {
+			background-color: nth($headingColors, 1);
+		}
+	}
+
+	.hcd-section--structure,
+	.hcd-section--modules {
+		.hcd-h1::before,
+		.hcd-h2::before,
+		.hcd-h3::before {
+			background-color: nth($headingColors, 2);
+		}
+	}
+
+	.hcd-section--findings,
+	.hcd-section--css-in-js {
+		.hcd-h1::before,
+		.hcd-h2::before,
+		.hcd-h3::before {
+			background-color: nth($headingColors, 3);
+		}
+	}
+
+	.hcd-section--methods,
+	.hcd-section--conclusion {
+		.hcd-h1::before,
+		.hcd-h2::before,
+		.hcd-h3::before {
+			background-color: nth($headingColors, 4);
+		}
+	}
+
+	.hcd-section--preprocessors {
+		.hcd-h1::before,
+		.hcd-h2::before,
+		.hcd-h3::before {
+			background-color: nth($headingColors, 5);
+		}
+	}
+
+	.hcd-section--findings,
+	.hcd-section--bem {
+		.hcd-h1::before,
+		.hcd-h2::before,
+		.hcd-h3::before {
+			background-color: nth($headingColors, 6);
+		}
+	}
+
+	.hcd-p {
+		text-align: left;
+	}
+
+	.hcd-pre {
+		width: 100%;
+		font-size: 20px;
+		line-height: 24px;
+	}
+
+	.hcd-right {
+		float: right;
+	}
+
+	.hcd-section {
+		text-align: left;
+	}
+
+	.hcd-section--center {
+		text-align: center;
+	}
+
+	.hcd-section .hcd-img {
+		//width: 100%;
+		margin: 30px 0;
+		border: 1px;
+	}
+
+	.hcd-small {
+		font-size: 0.8em;
+	}
+
+	.hcd-ul {
+		list-style-type: square;
+	}
+
+	.red {
+		color: #E62325;
+	}
+
+	.dark {
+		color: $backgroundColor;
+	}
+
+	// Default overrides below only
+
+	&.reveal pre code {
+		max-height: none;
+	}
+
+	// Hack to use more screen space
+	.reveal .slides {
+	  height: 100%;
+	  top: 0;
+	  margin-top: 0;
+	}
+
+	.reveal .slides > section {
+	  min-height: 90%;
+	  top: auto;
+	}
+
+	.reveal .slides > section > section {
+	  min-height: 100%;
+	}
+
+}

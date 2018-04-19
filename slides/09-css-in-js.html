@@ -1,0 +1,33 @@
+<section class="hcd-section">
+  <h2 class="hcd-h2">8. CSS in JavaScript 🖥</h2>
+</section>
+
+<section class="hcd-section">
+  <h3 class="hcd-h3">Simple implementation in Vue</h3>
+<pre class="hcd-pre html ibm-type-sans"><code>&lt;template&gt;
+  &lt;div :style="styleObject"&gt;&lt;/div&gt;
+&lt;/template&gt;
+</code></pre>
+<pre class="hcd-pre json ibm-type-sans"><code>data: {
+  styleObject: {
+    color: 'red',
+    fontSize: '13px'
+  }
+}
+</code></pre>
+</section>
+
+<section class="hcd-section">
+  <h3 class="hcd-h3">Where to use?</h3>
+  <p>
+    Typically, dynamic environments where a problem is not easily solveable
+    by static styles. This is where you used to do styling with jQuery.
+  </p>
+  <p class="fragment current-visible">Keep it for special cases for now</p>
+</section>
+
+<section class="hcd-section">
+  <p>
+    ☝️ More referenced-based styling = less naming headaches
+  </p>
+</section>

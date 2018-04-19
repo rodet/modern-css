@@ -1,0 +1,91 @@
+<section class="hcd-section">
+  <h2 class="hcd-h2">4. Methodologies came to the rescue 🏛</h2>
+  <i>OOCSS, ACSS, SMACSS, BEM</i>
+</section>
+
+<section class="hcd-section">
+  <table>
+    <tr>
+      <td>OOCSS</td>
+      <td>Object-Oriented CSS</td>
+    </tr>
+    <tr>
+      <td>ACSS</td>
+      <td>Atomic Design</td>
+    </tr>
+    <tr>
+      <td>SMACSS</td>
+      <td>Scalable and Modular Architecture for CSS</td>
+    </tr>
+    <tr>
+      <td>BEM</td>
+      <td>Block Element Modifier</td>
+    </tr>
+  </table>
+</section>
+
+<section class="hcd-section">
+  Each of those is far from perfect, but they establish a clear baseline
+  of rules that bring more benefits than costs.
+</section>
+
+<section class="hcd-section">
+  <h3 class="hcd-h3">Let's focus on BEM</h3>
+</section>
+
+<section class="hcd-section">
+  <p class="hcd-p"><b>B</b>lock <b>E</b>lement <b>M</b>odifier</p>
+</section>
+
+<section class="hcd-section">
+  <p class="hcd-p">The idea is to have naming conventions ensuring
+    classes are unique but still easy to classify and name.</p>
+<pre class="hcd-pre css ibm-type-sans"><code>.app__todo-list--selected {
+  background: #ccc;
+  color: #333;
+}
+</code></pre>
+</section>
+
+<section class="hcd-section">
+  <img class="hcd-img" src="img/bem-visual-example.png" />
+</section>
+
+<section class="hcd-section">
+  <p class="hcd-p">
+    Those are the possible base syntax for BEM classes.
+    Avoid using other structures if possible (except functional classes)
+  </p>
+<pre class="hcd-pre css ibm-type-sans"><code>.block {}
+
+.block__element {}
+
+.block--modifier {}
+
+.block__element--modifer {}
+</code></pre>
+</section>
+
+<section class="hcd-section">
+  My experience is that the strict model works well at scale, although with
+  helper classes.
+</section>
+
+<section class="hcd-section">
+  <h3 class="hcd-h3">Some more considerations on naming classes</h3>
+</section>
+
+<section class="hcd-section">
+  You can use a single class or multi class pattern for BEM
+</section>
+
+<section class="hcd-section">
+  Multi class is uglier but more scalable
+</section>
+
+<section class="hcd-section" data-background-iframe="http://nicolasgallagher.com/about-html-semantics-front-end-architecture/" data-background-interactive>
+</section>
+
+<section class="hcd-section">
+  <h3 class="hcd-h3">2012 & 2013</h3>
+</section>

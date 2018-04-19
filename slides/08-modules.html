@@ -1,0 +1,48 @@
+<section class="hcd-section">
+  <h2 class="hcd-h2">7. CSS Modules 🏭</h2>
+</section>
+
+<section class="hcd-section">
+  <p>
+    "A CSS Module is a CSS file in which all class names and
+    animation names are scoped locally by default."
+  </p>
+  <p>
+    "CSS Modules compile to a low-level interchange format called ICSS
+    or Interoperable CSS, but are written like normal CSS files."
+  </p>
+</section>
+
+<section class="hcd-section">
+  <h4 class="hcd-h4">Integrations exist for:</h4>
+  <ul>
+    <li>PostCSS</li>
+    <li>Webpack</li>
+    <li>Vuejs</li>
+  </ul>
+</section>
+
+<section class="hcd-section">
+  <h3 class="hcd-h3">Usage example in Vue</h3>
+<pre class="hcd-pre html ibm-type-sans"><code>&lt;template&gt;
+  &lt;header :class="$style.title"&gt;
+    Title
+  &lt;/header&gt;
+&lt;/template&gt;
+
+&lt;style module&gt;
+.title {
+  font-size: 36px;
+}
+&lt;/style&gt;
+</code></pre>
+  <p class="fragment fade-up">The style above can only be referenced from this component</p>
+</section>
+<section class="hcd-section">
+  <h3 class="hcd-h3">You can compose from other classes:</h3>
+<pre class="hcd-pre css ibm-type-sans"><code>.otherClassName {
+  composes: className from "./style.css";
+}
+</code></pre>
+  <p>The high granularity can be useful for refactoring, in legacy codebases...</p>
+</section>
