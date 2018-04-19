@@ -72,15 +72,35 @@
 </section>
 
 <section class="hcd-section">
-  <h3 class="hcd-h3">Some more considerations on naming classes</h3>
+  <h3 class="hcd-h3">Some more considerations on classes</h3>
 </section>
 
 <section class="hcd-section">
-  You can use a single class or multi class pattern for BEM
+  <p class="hcd-p">
+    The “single-class” pattern:
+  </p>
+<pre class="hcd-pre css ibm-type-sans"><code>.btn, .btn-primary { /* button template styles */ }
+.btn-primary { /* styles specific to primary button */ }
+
+&lt;button class="btn"&gt;Default&lt;/button&gt;
+&lt;button class="btn-primary"&gt;Login&lt;/button&gt;
+</code></pre>
 </section>
 
 <section class="hcd-section">
-  Multi class is uglier but more scalable
+  <p class="hcd-p">
+    The “multi-class” pattern:
+  </p>
+<pre class="hcd-pre css ibm-type-sans"><code>.btn { /* button template styles */ }
+.btn-primary { /* styles specific to save button */ }
+
+&lt;button class="btn"&gt;Default&lt;/button&gt;
+&lt;button class="btn btn-primary"&gt;Login&lt;/button&gt;
+</code></pre>
+</section>
+
+<section class="hcd-section">
+  Multi class is not so elegant but more scalable
 </section>
 
 <section class="hcd-section" data-background-iframe="http://nicolasgallagher.com/about-html-semantics-front-end-architecture/" data-background-interactive>
